@@ -46,12 +46,14 @@ async def server(interaction: discord.Interaction) -> None:
     await interaction.response.send_message(embed=embed)
 
 
-@bot.tree.command(name="vota", description="Mostra i link per votare il server")
+@bot.tree.command(name="vota", description="Mostra i link per votare")
 async def vota(interaction: discord.Interaction) -> None:
     embed = discord.Embed(
         title=f"ʟɪɴᴋ ᴘᴇʀ ᴠᴏᴛᴀʀᴇ",
-        description=f"Link:\nTopG: https://topg.org/minecraft-servers/server-685156\nMinecraft Italia: In Arrivo"
+        description="Link:\nTopG: https://topg.org/minecraft-servers/server-685156\nMinecraft Italia: In Arrivo",
+        color=discord.Color.blue(),
         )
+    await interaction.response.send_message(embed=embed)
 
 
 @bot.event
