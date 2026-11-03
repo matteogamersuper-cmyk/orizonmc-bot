@@ -46,6 +46,14 @@ async def server(interaction: discord.Interaction) -> None:
     await interaction.response.send_message(embed=embed)
 
 
+@bot.tree.command(name="vota", description="Mostra i link per votare il server")
+async def vota(interaction: discord.Interaction) -> None:
+    embed = discord.Embed(
+        title=f"ʟɪɴᴋ ᴘᴇʀ ᴠᴏᴛᴀʀᴇ",
+        description=f"Link:\nTopG: https://topg.org/minecraft-servers/server-685156\nMinecraft Italia: In Arrivo"
+        )
+
+
 @bot.event
 async def on_ready() -> None:
     print(f"Connesso come {bot.user}")
