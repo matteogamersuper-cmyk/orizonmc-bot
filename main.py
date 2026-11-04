@@ -66,6 +66,26 @@ async def credits(interaction: discord.Interaction) -> None:
     await interaction.response.send_message(embed=embed)
 
 
+@bot.tree.command(name="javajoinguide", description="Scopri Come Entrare nel Server Minecraft (Guida Minecraft Java Edition)")
+async def javajoinguide(interaction: discord.Interaction) -> None:
+    embed = discord.Embed(
+        title=f"Come Entrare nel Server Minecraft (Guida Minecraft Java Edition)",
+        description=f"Per Entrare:\nAvvia Minecraft Java Edition\nVai nel Menu Multiplayer\nClicca New Server (oppure Nuovo Server)\nCome Nome Server inserisci quello che vuoi tu, come ip metti: orizonmc.ddns.net\nClicca Done (Oppure Fatto)\nPerfetto, clicca sul server e sei entrato",
+        color=discord.Color.blue(),
+        )
+    await interaction.response.send_message(embed=embed)
+
+
+@bot.tree.command(name="bedrockjoinguide", description="Scopri Come Entrare nel Server Minecraft (Guida Minecraft Bedrock Edition)")
+async def bedrockjoinguide(interaction: discord.Interaction) -> None:
+    embed = discord.Embed(
+        title=f"Come Entrare nel Server Minecraft (Guida Minecraft Bedrock Edition)",
+        description=f"Per Entrare:\nAvvia Minecraft Bedrock Edition\nClicca su Gioca e vai nel Menu Multiplayer\nScorri nella lista e clicca Nuovo Server (oppure New Server)\nCome Nome Server inserisci quello che vuoi tu, come ip metti: orizonmc.ddns.net e come porta metti quella default\nClicca Fatto (Oppure Done)\nPerfetto, Clicca sul server e clicca Play e sei entrato",
+        color=discord.Color.blue(),
+        )
+    await interaction.response.send_message(embed=embed)
+
+
 @bot.event
 async def on_ready() -> None:
     print(f"Connesso come {bot.user}")
