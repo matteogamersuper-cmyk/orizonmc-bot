@@ -56,6 +56,16 @@ async def vota(interaction: discord.Interaction) -> None:
     await interaction.response.send_message(embed=embed)
 
 
+@bot.tree.command(name="credits", description="Crediti Del Bot Discord")
+async def credits(interaction: discord.Interaction) -> None:
+    embed = discord.Embed(
+        title=f"ᴄʀᴇᴅɪᴛɪ ʙᴏᴛ ᴅɪꜱᴄᴏʀᴅ",
+        description="Crediti Bot Discord:\nCreatore: Matteo",
+        color.discord.Color.blue(),
+        )
+    await interaction.response.send_message(embed=embed)
+
+
 @bot.event
 async def on_ready() -> None:
     print(f"Connesso come {bot.user}")
