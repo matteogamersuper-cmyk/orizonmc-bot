@@ -61,7 +61,7 @@ async def credits(interaction: discord.Interaction) -> None:
     embed = discord.Embed(
         title=f"ᴄʀᴇᴅɪᴛɪ ʙᴏᴛ ᴅɪꜱᴄᴏʀᴅ",
         description="Crediti Bot Discord:\nCreatore: Matteo",
-        color.discord.Color.blue(),
+        color=discord.Color.blue(),
         )
     await interaction.response.send_message(embed=embed)
 
